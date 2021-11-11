@@ -1,4 +1,6 @@
 admin:
    path: /admin
    controller: App\Controller\Admin\DashboardController::index
-
+todolist:
+   path: /
+   controller: App\Controller\TodoListController::index

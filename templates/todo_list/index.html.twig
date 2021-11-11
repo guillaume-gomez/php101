@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TodoListController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">
+                    Id
+                </th>
+                <th scope="col">
+                    Name
+                </th>
+                <th scope="col">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for list in todoLists %}
+                <tr>
+                    <td>
+                        {{ list.id }}
+                    </td>
+                    <td>
+                        {{ list.title }}
+                    </td>
+                    <td>
+                        <a href="#" class="link-primary">goes to todolist</a>
+                    </td>
+                </tr>
+            {%  endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
