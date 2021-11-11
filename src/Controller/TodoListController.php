@@ -17,4 +17,11 @@ class TodoListController extends AbstractController
             'todoLists' => $todoLists
         ]);
     }
+
+    public function show(TodoList $todolist): Response
+    {
+        return $this->render('todo_list/show.html.twig', [
+            'list' => $todolist
+        ]);
+    }
 }

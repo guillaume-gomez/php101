@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show TodoListController{% endblock %}
+
+{% block body %}
+
+<h2>{{ list.title }}</h2>
+
+<ul>
+    {% for todo in list.todos %}
+        <li>{{ todo.description }}</li>
+    {%  endfor %}
+</ul>
+
+
+<div>
+    <a href="{{path('new_todo', { id: list.id }) }}"> Create new todo </a>
+</div>
+
+{% endblock %}

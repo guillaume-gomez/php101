@@ -29,7 +29,7 @@
                         {{ list.title }}
                     </td>
                     <td>
-                        <a href="#" class="link-primary">goes to todolist</a>
+                        <a href="{{ path('list', { id: list.id } ) }}" class="link-primary">goes to todolist</a>
                     </td>
                 </tr>
             {%  endfor %}

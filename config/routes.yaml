@@ -4,3 +4,16 @@ admin:
 todolist:
    path: /
    controller: App\Controller\TodoListController::index
+list:
+   path: /list/{id}
+   controller: App\Controller\TodoListController::show
+new_todo:
+   path: /list/{id}/todo/new
+   controller: App\Controller\TodoController::new
+   defaults:
+      methods: GET
+create_todo:
+   path: /list/{id}/todo/create
+   controller: App\Controller\TodoController::create
+   defaults:
+      methods: POST
